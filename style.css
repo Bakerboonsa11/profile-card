@@ -32,8 +32,32 @@ body{
   object-fit: cover;
   border: 3px solid #fff;
   object-fit: cover;
+  animation: animate 5s ease-in;
   
-  
+}
+@keyframes animate{
+  20% {
+      opacity: 0%;
+      transform: rotate(0deg);
+      
+  }
+  40% {
+      opacity: 30%;
+      transform: rotate(45deg);
+  }
+  60% {
+      opacity: 60%;
+      transform: rotate(20deg);
+  }
+  80% {
+      opacity: 90%;
+      transform: rotate(90deg);
+  }
+  100% {
+      opacity: 100%;
+      transform: rotate(360deg);
+  }
+
 }
 .profile_card{
   display: flex;
@@ -47,9 +71,11 @@ body{
   border-radius: 2.5rem;
   margin-bottom: 1rem;
   position: relative;
-  
+   box-shadow:  0 0px 7px 0.7px rgba(0, 0, 0, 0.5); 
   background-color: #fff;
 }
+
+
 .profile_card::before{
   content: "";
   position: absolute;
